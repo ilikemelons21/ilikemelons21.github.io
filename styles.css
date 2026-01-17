@@ -7,20 +7,21 @@
 }
 
 body {
-  background: linear-gradient(180deg, #e6f4ff, #f3faff);
-  color: #1e3a5f;
+  background: linear-gradient(135deg, #a1cfff, #d3edff); /* sky blue gradient */
+  color: #1a2a40;
+  line-height: 1.5;
 }
 
 /* PAGE */
 .page {
   display: none;
-  min-height: 100vh;
+  width: 100%;
   padding: 20px 30px;
-  animation: slideDown 0.45s ease;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+  animation: slideDown 0.45s ease;
 }
 
 .page.active {
@@ -39,11 +40,16 @@ body {
   right: 20px;
   padding: 10px 14px;
   border: none;
-  border-radius: 10px;
-  background: #5bbcff;
+  border-radius: 12px;
+  background: #2fa1ff;
   color: white;
   cursor: pointer;
-  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+.back:hover {
+  background: #1c8de0;
+  transform: translateY(-2px);
 }
 
 /* HOME */
@@ -51,27 +57,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .home-buttons {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .home-buttons button {
-  padding: 14px 22px;
+  padding: 14px 28px;
   font-size: 1.1rem;
-  border-radius: 16px;
+  border-radius: 18px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #5bbcff,#2f9bff);
+  background: linear-gradient(135deg, #4fc3ff, #2fa1ff);
   color: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.home-buttons button:hover {
+  background: linear-gradient(135deg, #2fa1ff, #1c8de0);
+  transform: translateY(-2px);
 }
 #home h1 {
   font-size: 3rem;
   text-align: center;
   margin-top: 10px;
+  color: #0f2a50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 /* IGRICE */
@@ -79,7 +93,8 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
 .column {
   flex: 1;
@@ -88,23 +103,34 @@ body {
 .game {
   display: flex;
   gap: 12px;
-  background: white;
-  padding: 12px;
+  background: #ffffffcc;
+  padding: 14px;
   border-radius: 16px;
   margin-bottom: 12px;
   align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.game:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 .game img {
   width: 56px;
   height: 56px;
   border-radius: 12px;
+  object-fit: cover;
 }
 .game a {
   display: inline-block;
   margin-top: 2px;
-  color: #2f9bff;
+  color: #2fa1ff;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s;
+}
+.game a:hover {
+  color: #1c8de0;
 }
 
 /* PROFILES */
@@ -112,15 +138,16 @@ body {
   max-width: 480px;
   display: grid;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .profile {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
+  background: #ffffffcc;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 .profile.disabled {
   opacity: 0.5;
@@ -129,26 +156,48 @@ body {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: #f3faff;
+  background: #e0f4ff;
   width: 140px;
+  text-align: center;
 }
 .name {
   font-weight: 600;
   flex: 1;
 }
+.profile button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 10px;
+  background: #2fa1ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.profile button:hover {
+  background: #1c8de0;
+  transform: translateY(-1px);
+}
 
 /* CREDITI */
 .center {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+.center p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 .socials a {
   margin: 10px;
   display: inline-block;
 }
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s;
+}
+.icon:hover {
+  transform: scale(1.15);
 }
 
 /* MOBILE */
@@ -161,5 +210,8 @@ body {
   }
   .profiles {
     max-width: 100%;
+  }
+  .home-buttons {
+    flex-direction: column;
   }
 }
