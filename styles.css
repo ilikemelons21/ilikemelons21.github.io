@@ -9,24 +9,25 @@
 body {
   background: linear-gradient(180deg, #e6f4ff, #f3faff);
   color: #1e3a5f;
-  min-height: 100vh;
 }
 
 /* PAGE */
 .page {
   display: none;
-  min-height: 100vh;
-  padding: 0 30px 20px 30px; /* small padding */
+  padding: 20px 30px; /* small padding */
   animation: slideDown 0.45s ease;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: flex-start; /* stick content to top */
+  min-height: auto; /* remove 100vh */
 }
-
-/* FORCE CONTENT UP 1000px */
-.page > * {
-  margin-top: -1000px;
+.page.active {
+  display: flex;
+}
+@keyframes slideDown {
+  from { opacity:0; transform: translateY(-15px); }
+  to { opacity:1; transform: translateY(0); }
 }
 
 /* BACK BUTTON */
@@ -45,10 +46,10 @@ body {
 
 /* HOME */
 #home .home-container {
-  margin-top: -980px; /* slightly less negative for home */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px; /* small margin from top of page */
 }
 .home-buttons {
   display: flex;
