@@ -82,7 +82,7 @@ body {
 
 /* IGRICE */
 #igrice {
-  padding-top: 20px; /* move content up */
+  padding-top: 40px; /* move content up */
 }
 .igrice-layout {
   display: flex;
