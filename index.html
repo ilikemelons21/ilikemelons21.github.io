@@ -1,115 +1,134 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <title>Sky Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Skibidi Stranica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fredoka One -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <button class="nav-btn active" data-page="igrice">🎮 Igrice</button>
-  <button class="nav-btn" data-page="profili">👤 Profili</button>
-  <button class="nav-btn" data-page="crediti">⭐ Crediti</button>
-</nav>
+<!-- HOME -->
+<section id="home" class="page active">
+  <h1>Skibidi Stranica</h1>
 
-<!-- PAGES -->
-<div class="pages">
+  <div class="home-buttons">
+    <button onclick="openPage('igrice')">🎮 Igrice</button>
+    <button onclick="openPage('profili')">👤 Profili</button>
+    <button onclick="openPage('crediti')">⭐ Crediti</button>
+  </div>
+</section>
 
-  <!-- IGRICE -->
-  <section id="igrice" class="page active">
-    <div class="games-layout">
+<!-- IGRICE -->
+<section id="igrice" class="page">
+  <button class="back" onclick="goHome()">← Vrati se Nazad</button>
 
-      <!-- LEFT -->
-      <aside class="sidebar">
-        <h3>Vozačke Igrice</h3>
+  <div class="igrice-layout">
+    <div class="column">
+      <h2>Vozačke Igrice</h2>
 
-        <div class="game-card">
-          <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=3950890867&size=150x150&format=Png">
-          <div>
-            <h4>A Dusty Trip</h4>
-            <a href="https://www.roblox.com/share?code=0b8d5c4e6dc66e498971204521723a4c&type=Server" target="_blank">
-              Klikni Me Da Uđeš u Igricu!
-            </a>
-          </div>
+      <div class="game">
+        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=3950890867&size=150x150&format=Png">
+        <div>
+          <h3>A Dusty Trip</h3>
+          <a href="https://www.roblox.com/share?code=0b8d5c4e6dc66e498971204521723a4c&type=Server" target="_blank">
+            Klikni Me Da Uđeš u Igricu!
+          </a>
         </div>
+      </div>
 
-        <div class="game-card">
-          <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=189707&size=150x150&format=Png">
-          <div>
-            <h4>A Long Road</h4>
-            <a href="https://www.roblox.com/share?code=58625d5597c3cb4bbc2640e57080b591&type=Server" target="_blank">
-              Klikni Me Da Uđeš u Igricu!
-            </a>
-          </div>
+      <div class="game">
+        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=189707&size=150x150&format=Png">
+        <div>
+          <h3>A Long Road</h3>
+          <a href="https://www.roblox.com/share?code=58625d5597c3cb4bbc2640e57080b591&type=Server" target="_blank">
+            Klikni Me Da Uđeš u Igricu!
+          </a>
         </div>
+      </div>
 
-        <div class="game-card">
-          <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=15623447&size=150x150&format=Png">
-          <div>
-            <h4>A Desert</h4>
-            <a href="https://www.roblox.com/share?code=72312282e6d12d4d8a3cb8f2cd77d356&type=Server" target="_blank">
-              Klikni Me Da Uđeš u Igricu!
-            </a>
-          </div>
+      <div class="game">
+        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=15623447&size=150x150&format=Png">
+        <div>
+          <h3>A Desert</h3>
+          <a href="https://www.roblox.com/share?code=72312282e6d12d4d8a3cb8f2cd77d356&type=Server" target="_blank">
+            Klikni Me Da Uđeš u Igricu!
+          </a>
         </div>
-      </aside>
-
-      <!-- CENTER -->
-      <main class="content">
-        <h2>Horror Igrice</h2>
-
-        <div class="game-card large">
-          <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=4893679160&size=150x150&format=Png">
-          <div>
-            <h4>Scary Shawarma Kiosk</h4>
-            <a href="https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY" target="_blank">
-              Klikni Me Da Uđeš u Igricu!
-            </a>
-          </div>
-        </div>
-
-        <div class="game-card large">
-          <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=6516141723&size=150x150&format=Png">
-          <div>
-            <h4>Doors</h4>
-            <a href="https://www.roblox.com/share?code=40e67b39e8bae34fa7440816361a17e4&type=Server" target="_blank">
-              Klikni Me Da Uđeš u Igricu!
-            </a>
-          </div>
-        </div>
-      </main>
-
+      </div>
     </div>
-  </section>
 
-  <!-- PROFILI -->
-  <section id="profili" class="page center">
-    <div class="profiles">
-      <div class="profile" data-user="5Cooke_God5">Toni Filipović</div>
-      <div class="profile" data-user="Ivanrobolo">Ivan Brstilo</div>
-      <div class="profile" data-user="Iko_pro47">Ivan Barać</div>
-      <div class="profile disabled">Fran Jović – Još se nije pridružio 😔</div>
-      <div class="profile disabled">Marija Čorluka – Još se nije pridružila 😔</div>
+    <div class="column">
+      <h2>Horror Igrice</h2>
+
+      <div class="game">
+        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=4893679160&size=150x150&format=Png">
+        <div>
+          <h3>Scary Shawarma Kiosk</h3>
+          <a href="https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY" target="_blank">
+            Klikni Me Da Uđeš u Igricu!
+          </a>
+        </div>
+      </div>
+
+      <div class="game">
+        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=6516141723&size=150x150&format=Png">
+        <div>
+          <h3>Doors</h3>
+          <a href="https://www.roblox.com/share?code=40e67b39e8bae34fa7440816361a17e4&type=Server" target="_blank">
+            Klikni Me Da Uđeš u Igricu!
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CREDITI -->
-  <section id="crediti" class="page center">
-    <p>
-      Programirano i Codirano sve od Toni-a (Sp1der)<br>
-      i malo pomoći od ChatGPT-a
-    </p>
+<!-- PROFILI -->
+<section id="profili" class="page">
+  <button class="back" onclick="goHome()">← Vrati se Nazad</button>
 
-    <div class="socials">
-      <a href="https://www.youtube.com/@YepImSpider" target="_blank">▶ YouTube</a>
-      <a href="https://discord.com/users/1322938356962824235" target="_blank">💬 Discord</a>
+  <div class="profiles">
+    <div class="profile">
+      <span>Toni Filipović</span>
+      <button onclick="copyUser('5Cooke_God5')">Copiraj Username</button>
     </div>
-  </section>
 
-</div>
+    <div class="profile">
+      <span>Ivan Brstilo</span>
+      <button onclick="copyUser('Ivanrobolo')">Copiraj Username</button>
+    </div>
+
+    <div class="profile">
+      <span>Ivan Barać</span>
+      <button onclick="copyUser('Iko_pro47')">Copiraj Username</button>
+    </div>
+
+    <div class="profile disabled">Fran Jović – Još se nije pridružio 😔</div>
+    <div class="profile disabled">Marija Čorluka – Još se nije pridružila 😔</div>
+  </div>
+</section>
+
+<!-- CREDITI -->
+<section id="crediti" class="page center">
+  <button class="back" onclick="goHome()">← Vrati se Nazad</button>
+
+  <p>
+    Programirano i Codirano sve od Toni-a (Sp1der)<br>
+    i malo pomoći od ChatGPT-a
+  </p>
+
+  <div class="socials">
+    <a href="https://www.youtube.com/@YepImSpider" target="_blank">▶ YouTube</a>
+    <a href="https://discord.com/users/1322938356962824235" target="_blank">💬 Discord</a>
+  </div>
+</section>
 
 <script src="script.js"></script>
 </body>
