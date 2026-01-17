@@ -9,21 +9,26 @@
 body {
   background: linear-gradient(180deg, #e6f4ff, #f3faff);
   color: #1e3a5f;
+  min-height: 100vh;
 }
 
 /* PAGE */
 .page {
   display: none;
   min-height: 100vh;
-  padding: 0 30px 40px 30px; /* remove top padding */
+  padding: 20px 30px 20px 30px; /* small padding all around */
   animation: slideDown 0.45s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* aligns content to top */
+  align-items: stretch;       /* stretch content horizontally */
+  justify-content: flex-start; /* stick content to top */
 }
 .page.active {
   display: flex;
+}
+@keyframes slideDown {
+  from { opacity:0; transform: translateY(-25px); }
+  to { opacity:1; transform: translateY(0); }
 }
 
 /* BACK BUTTON */
@@ -37,6 +42,7 @@ body {
   background: #5bbcff;
   color: white;
   cursor: pointer;
+  z-index: 100;
 }
 
 /* HOME */
@@ -44,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px; /* small top margin */
+  margin-top: 0; /* top aligned */
 }
 .home-buttons {
   display: flex;
@@ -58,22 +64,19 @@ body {
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #5bbcff, #2f9bff);
+  background: linear-gradient(135deg, #5bbcff,#2f9bff);
   color: white;
 }
 #home h1 {
   font-size: 3rem;
   text-align: center;
-  margin-top: 0;
+  margin-top: 10px; /* small gap below buttons */
 }
 
 /* IGRICE */
-#igrice {
-  margin-top: 20px; /* small margin from top/back button */
-}
-.igrice-layout {
+#igrice .igrice-layout {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 10px;
 }
@@ -85,9 +88,9 @@ body {
   display: flex;
   gap: 12px;
   background: white;
-  padding: 14px;
+  padding: 12px;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   align-items: center;
 }
 .game img {
@@ -97,28 +100,25 @@ body {
 }
 .game a {
   display: inline-block;
-  margin-top: 4px;
+  margin-top: 2px;
   color: #2f9bff;
   text-decoration: none;
   font-weight: 600;
 }
 
 /* PROFILES */
-#profili {
-  margin-top: 20px; /* move up */
-}
-.profiles {
+#profili .profiles {
   max-width: 480px;
+  margin: 10px auto 0 auto; /* top aligned */
   display: grid;
-  gap: 14px;
-  margin-top: 10px;
+  gap: 12px;
 }
 .profile {
   display: flex;
   align-items: center;
   gap: 10px;
   background: white;
-  padding: 12px;
+  padding: 10px;
   border-radius: 12px;
 }
 .profile.disabled {
@@ -137,15 +137,12 @@ body {
 }
 
 /* CREDITI */
-#crediti {
-  margin-top: 20px;
-}
-.center {
+#crediti .center {
   text-align: center;
   margin-top: 10px;
 }
 .socials a {
-  margin: 12px;
+  margin: 10px;
   display: inline-block;
 }
 .icon {
