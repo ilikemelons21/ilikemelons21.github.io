@@ -16,19 +16,17 @@ body {
 .page {
   display: none;
   min-height: 100vh;
-  padding: 20px 30px 20px 30px; /* small padding all around */
+  padding: 0 30px 20px 30px; /* small padding */
   animation: slideDown 0.45s ease;
   display: flex;
   flex-direction: column;
-  align-items: stretch;       /* stretch content horizontally */
-  justify-content: flex-start; /* stick content to top */
+  align-items: stretch;
+  justify-content: flex-start;
 }
-.page.active {
-  display: flex;
-}
-@keyframes slideDown {
-  from { opacity:0; transform: translateY(-25px); }
-  to { opacity:1; transform: translateY(0); }
+
+/* FORCE CONTENT UP 1000px */
+.page > * {
+  margin-top: -1000px;
 }
 
 /* BACK BUTTON */
@@ -47,10 +45,10 @@ body {
 
 /* HOME */
 #home .home-container {
+  margin-top: -980px; /* slightly less negative for home */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0; /* top aligned */
 }
 .home-buttons {
   display: flex;
@@ -70,7 +68,7 @@ body {
 #home h1 {
   font-size: 3rem;
   text-align: center;
-  margin-top: 10px; /* small gap below buttons */
+  margin-top: 10px;
 }
 
 /* IGRICE */
@@ -109,9 +107,9 @@ body {
 /* PROFILES */
 #profili .profiles {
   max-width: 480px;
-  margin: 10px auto 0 auto; /* top aligned */
   display: grid;
   gap: 12px;
+  margin-top: 10px;
 }
 .profile {
   display: flex;
