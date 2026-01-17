@@ -1,86 +1,98 @@
-
 :root {
-  --sky: #6ecbff;
-  --sky-dark: #2fa4ff;
-  --bg: #eef8ff;
-  --card: #ffffff;
-  --text: #0b1c2d;
+  --sky: #5bbcff;
+  --dark: #1e3a5f;
+  --bg: #eef7ff;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, Segoe UI, sans-serif;
-  background: linear-gradient(180deg, #e6f5ff, var(--bg));
-  height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #e6f4ff, var(--bg));
+  color: var(--dark);
+}
+
+.nav {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 16px;
+  padding: 20px;
 }
 
-.app {
-  background: var(--card);
-  padding: 50px;
-  border-radius: 22px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.8s ease forwards;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--sky-dark);
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.menu-btn {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  font-size: 1.15rem;
-  border-radius: 16px;
+.nav button {
+  padding: 12px 20px;
+  border-radius: 14px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+  background: linear-gradient(135deg, var(--sky), #2f9bff);
   color: white;
-  box-shadow: 0 12px 25px rgba(47, 164, 255, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(47, 164, 255, 0.45);
+.pages { padding: 20px; }
+
+.page { display: none; animation: fade 0.4s ease; }
+.page.active { display: block; }
+
+.games-layout {
+  display: flex;
+  gap: 30px;
 }
 
-.menu-btn:active {
-  transform: translateY(0);
+.sidebar {
+  width: 240px;
 }
 
-.icon {
-  font-size: 1.5rem;
+.game {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.game img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.large img {
+  width: 60px;
+  height: 60px;
+}
+
+.profiles {
+  display: grid;
+  gap: 14px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.profile {
+  padding: 14px;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.profile.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.center {
+  text-align: center;
+}
+
+.socials a {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
 }
