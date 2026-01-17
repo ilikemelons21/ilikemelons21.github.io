@@ -31,6 +31,13 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* CENTER ALL PAGE CONTENT HORIZONTALLY */
+.page > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px; /* keeps content from stretching too wide */
+}
+
 /* BACK BUTTON */
 .back {
   position: fixed;
@@ -77,6 +84,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center; /* centers the columns horizontally */
   margin-top: 10px;
 }
 .column {
@@ -107,7 +115,6 @@ body {
 
 /* PROFILES */
 .profiles {
-  max-width: 480px;
   display: grid;
   gap: 12px;
   margin-top: 10px;
