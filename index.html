@@ -5,98 +5,31 @@
   <title>My Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    :root {
-      --sky: #5bbcff;
-      --sky-dark: #2a8bdc;
-      --bg: #f4faff;
-      --text: #0b1c2d;
-      --card: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", system-ui, sans-serif;
-      background: linear-gradient(180deg, #eaf6ff, #f4faff);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      background: var(--card);
-      padding: 50px 40px;
-      border-radius: 18px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0 0 30px;
-      font-weight: 600;
-      font-size: 2.2rem;
-      color: var(--sky-dark);
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    button {
-      padding: 16px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--sky), var(--sky-dark));
-      color: white;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-      box-shadow: 0 10px 20px rgba(91, 188, 255, 0.35);
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 30px rgba(91, 188, 255, 0.45);
-      opacity: 0.95;
-    }
-
-    button:active {
-      transform: translateY(0);
-      box-shadow: 0 8px 16px rgba(91, 188, 255, 0.3);
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 0.85rem;
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Dobrodošao</h1>
+  <div class="app">
+    <h1 class="title">Dobrodošao</h1>
 
-    <div class="buttons">
-      <button>Igrice</button>
-      <button>Profili</button>
-      <button>Crediti</button>
+    <div class="menu">
+      <button class="menu-btn">
+        <span class="icon">🎮</span>
+        <span>Igrice</span>
+      </button>
+
+      <button class="menu-btn">
+        <span class="icon">👤</span>
+        <span>Profili</span>
+      </button>
+
+      <button class="menu-btn">
+        <span class="icon">⭐</span>
+        <span>Crediti</span>
+      </button>
     </div>
-
-    <footer>
-      © 2026
-    </footer>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
