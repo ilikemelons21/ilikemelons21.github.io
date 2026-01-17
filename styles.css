@@ -14,22 +14,21 @@ body {
 /* PAGE */
 .page {
   display: none;
-  position: relative; /* needed for absolute container */
   width: 100%;
-  min-height: auto; /* let content define height */
+  padding: 20px 30px;
+  animation: slideDown 0.45s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
-
 .page.active {
-  display: block;
+  display: flex;
 }
 
-/* ABSOLUTE TOP CONTAINER FOR ALL PAGES */
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* BACK BUTTON */
@@ -47,6 +46,11 @@ body {
 }
 
 /* HOME */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .home-buttons {
   display: flex;
   gap: 20px;
@@ -73,6 +77,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 .column {
   flex: 1;
@@ -105,6 +110,7 @@ body {
   max-width: 480px;
   display: grid;
   gap: 12px;
+  margin-top: 10px;
 }
 .profile {
   display: flex;
