@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -10,125 +8,45 @@ body {
 }
 
 /* PAGES */
-.page {
-  display: none;
-  min-height: 100vh;
-  padding: 30px;
-  animation: slideDown 0.45s ease;
-}
-
-.page.active {
-  display: block;
-}
+.page { display: none; min-height: 100vh; padding: 30px; animation: slideDown 0.45s ease; }
+.page.active { display: block; }
 
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* HOME */
-#home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.home-buttons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-button {
-  padding: 14px 22px;
-  font-size: 1.1rem;
-  border-radius: 16px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg, #5bbcff, #2f9bff);
-  color: white;
-}
+#home { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+h1 { font-size: 3rem; margin-bottom: 40px; }
+.home-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+button { padding: 14px 22px; font-size: 1.1rem; border-radius: 16px; border: none; cursor: pointer; background: linear-gradient(135deg, #5bbcff, #2f9bff); color: white; }
 
 /* BACK BUTTON */
-.back {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
+.back { position: fixed; top: 20px; right: 20px; }
 
 /* IGRICE */
-.igrice-layout {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+.igrice-layout { display: flex; gap: 30px; flex-wrap: wrap; }
+.column { flex: 1; min-width: 280px; }
+.game { display: flex; gap: 12px; background: white; padding: 14px; border-radius: 16px; margin-bottom: 16px; }
+.game img { width: 56px; height: 56px; border-radius: 12px; }
+.game a { display: inline-block; margin-top: 4px; color: #2f9bff; text-decoration: none; }
 
-.column {
-  flex: 1;
-  min-width: 280px;
-}
-
-.game {
-  display: flex;
-  gap: 12px;
-  background: white;
-  padding: 14px;
-  border-radius: 16px;
-  margin-bottom: 16px;
-}
-
-.game img {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-}
-
-.game a {
-  display: inline-block;
-  margin-top: 4px;
-  color: #2f9bff;
-  text-decoration: none;
-}
-
-/* PROFILES */
-.profiles {
-  max-width: 480px;
-  margin: auto;
-  display: grid;
-  gap: 14px;
-}
-
-.profile {
-  background: white;
-  padding: 14px;
-  border-radius: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.profile.disabled {
-  opacity: 0.5;
-}
+/* PROFILI */
+.profiles { max-width: 480px; margin: auto; display: grid; gap: 14px; }
+.profile { display: flex; align-items: center; gap: 10px; background: white; padding: 12px; border-radius: 12px; }
+.profile.disabled { opacity: 0.5; }
+.username-box { padding: 6px 10px; border: 1px solid #ccc; border-radius: 8px; background: #f3faff; width: 140px; }
+.name { font-weight: 600; flex: 1; }
 
 /* CREDITI */
-.center {
-  text-align: center;
-}
+.center { text-align: center; }
+.socials a { margin: 12px; }
+.icon { width: 32px; height: 32px; }
 
-.socials a {
-  margin: 12px;
-  font-size: 1.2rem;
+/* MOBILE */
+@media (max-width: 768px) {
+  .igrice-layout { flex-direction: column; }
+  .column { width: 100%; }
+  .profiles { max-width: 100%; }
 }
