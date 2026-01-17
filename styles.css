@@ -14,20 +14,22 @@ body {
 /* PAGE */
 .page {
   display: none;
-  padding: 20px 30px; /* small padding */
-  animation: slideDown 0.45s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start; /* stick content to top */
-  min-height: auto; /* remove 100vh */
+  position: relative; /* needed for absolute container */
+  width: 100%;
+  min-height: auto; /* let content define height */
 }
+
 .page.active {
-  display: flex;
+  display: block;
 }
-@keyframes slideDown {
-  from { opacity:0; transform: translateY(-15px); }
-  to { opacity:1; transform: translateY(0); }
+
+/* ABSOLUTE TOP CONTAINER FOR ALL PAGES */
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
 }
 
 /* BACK BUTTON */
@@ -45,12 +47,6 @@ body {
 }
 
 /* HOME */
-#home .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px; /* small margin from top of page */
-}
 .home-buttons {
   display: flex;
   gap: 20px;
@@ -73,11 +69,10 @@ body {
 }
 
 /* IGRICE */
-#igrice .igrice-layout {
+.igrice-layout {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 .column {
   flex: 1;
@@ -106,11 +101,10 @@ body {
 }
 
 /* PROFILES */
-#profili .profiles {
+.profiles {
   max-width: 480px;
   display: grid;
   gap: 12px;
-  margin-top: 10px;
 }
 .profile {
   display: flex;
@@ -136,7 +130,7 @@ body {
 }
 
 /* CREDITI */
-#crediti .center {
+.center {
   text-align: center;
   margin-top: 10px;
 }
