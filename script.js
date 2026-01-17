@@ -1,11 +1,15 @@
-const buttons = document.querySelectorAll(".menu-btn");
+// Tab navigation
+document.querySelectorAll(".nav button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(btn.dataset.page).classList.add("active");
+  };
+});
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    button.classList.add("clicked");
-
-    setTimeout(() => {
-      button.classList.remove("clicked");
-    }, 200);
-  });
+// Copy usernames
+document.querySelectorAll(".profile[data-user]").forEach(p => {
+  p.onclick = () => {
+    navigator.clipboard.writeText(p.dataset.user);
+    alert("Copied: " + p.dataset.user);
+  };
 });
