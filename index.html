@@ -5,9 +5,7 @@
   <title>Skibidi Stranica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fredoka One -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fredoka One font -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -34,32 +32,26 @@
       <h2>Vozačke Igrice</h2>
 
       <div class="game">
-        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=3950890867&size=150x150&format=Png">
+        <img src="https://tr.rbxcdn.com/3950890867d1f9b5e5a1c6a5c8d8f7f6/150/150/Avatar/Png" alt="A Dusty Trip">
         <div>
           <h3>A Dusty Trip</h3>
-          <a href="https://www.roblox.com/share?code=0b8d5c4e6dc66e498971204521723a4c&type=Server" target="_blank">
-            Klikni Me Da Uđeš u Igricu!
-          </a>
+          <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
 
       <div class="game">
-        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=189707&size=150x150&format=Png">
+        <img src="https://tr.rbxcdn.com/189707d1f8b6f7e6b3a1c2e5d8f7f9d/150/150/Avatar/Png" alt="A Long Road">
         <div>
           <h3>A Long Road</h3>
-          <a href="https://www.roblox.com/share?code=58625d5597c3cb4bbc2640e57080b591&type=Server" target="_blank">
-            Klikni Me Da Uđeš u Igricu!
-          </a>
+          <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
 
       <div class="game">
-        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=15623447&size=150x150&format=Png">
+        <img src="https://tr.rbxcdn.com/15623447f7d8f9e5c6a2b3d4a1e8f7b/150/150/Avatar/Png" alt="A Desert">
         <div>
           <h3>A Desert</h3>
-          <a href="https://www.roblox.com/share?code=72312282e6d12d4d8a3cb8f2cd77d356&type=Server" target="_blank">
-            Klikni Me Da Uđeš u Igricu!
-          </a>
+          <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
     </div>
@@ -68,22 +60,18 @@
       <h2>Horror Igrice</h2>
 
       <div class="game">
-        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=4893679160&size=150x150&format=Png">
+        <img src="https://tr.rbxcdn.com/4893679160f7d8f6e5c1b2a3d4e8f7a/150/150/Avatar/Png" alt="Scary Shawarma Kiosk">
         <div>
           <h3>Scary Shawarma Kiosk</h3>
-          <a href="https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY" target="_blank">
-            Klikni Me Da Uđeš u Igricu!
-          </a>
+          <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
 
       <div class="game">
-        <img src="https://thumbnails.roblox.com/v1/games/icons?universeIds=6516141723&size=150x150&format=Png">
+        <img src="https://tr.rbxcdn.com/6516141723f7d8e5c6b2a1d3f4e8f7c/150/150/Avatar/Png" alt="Doors">
         <div>
           <h3>Doors</h3>
-          <a href="https://www.roblox.com/share?code=40e67b39e8bae34fa7440816361a17e4&type=Server" target="_blank">
-            Klikni Me Da Uđeš u Igricu!
-          </a>
+          <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
     </div>
@@ -96,22 +84,30 @@
 
   <div class="profiles">
     <div class="profile">
-      <span>Toni Filipović</span>
-      <button onclick="copyUser('5Cooke_God5')">Copiraj Username</button>
+      <span class="name">Toni Filipović</span>
+      <input type="text" readonly value="5Cooke_God5" class="username-box">
+      <button onclick="copyUser('5Cooke_God5')">Kopiraj Username</button>
     </div>
 
     <div class="profile">
-      <span>Ivan Brstilo</span>
-      <button onclick="copyUser('Ivanrobolo')">Copiraj Username</button>
+      <span class="name">Ivan Brstilo</span>
+      <input type="text" readonly value="Ivanrobolo" class="username-box">
+      <button onclick="copyUser('Ivanrobolo')">Kopiraj Username</button>
     </div>
 
     <div class="profile">
-      <span>Ivan Barać</span>
-      <button onclick="copyUser('Iko_pro47')">Copiraj Username</button>
+      <span class="name">Ivan Barać</span>
+      <input type="text" readonly value="Iko_pro47" class="username-box">
+      <button onclick="copyUser('Iko_pro47')">Kopiraj Username</button>
     </div>
 
-    <div class="profile disabled">Fran Jović – Još se nije pridružio 😔</div>
-    <div class="profile disabled">Marija Čorluka – Još se nije pridružila 😔</div>
+    <div class="profile disabled">
+      Fran Jović – Još se nije pridružio 😔
+    </div>
+
+    <div class="profile disabled">
+      Marija Čorluka – Još se nije pridružila 😔
+    </div>
   </div>
 </section>
 
@@ -125,8 +121,12 @@
   </p>
 
   <div class="socials">
-    <a href="https://www.youtube.com/@YepImSpider" target="_blank">▶ YouTube</a>
-    <a href="https://discord.com/users/1322938356962824235" target="_blank">💬 Discord</a>
+    <a href="https://www.youtube.com/@YepImSpider" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" class="icon">
+    </a>
+    <a href="https://discord.com/users/1322938356962824235" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" class="icon">
+    </a>
   </div>
 </section>
 
