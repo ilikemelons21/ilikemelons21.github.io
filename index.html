@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Skibidi Stranica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Skibidi Stranica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fredoka One font -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+<!-- Fredoka One font -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- HOME -->
 <section id="home" class="page active">
-  <h1>Skibidi Stranica</h1>
-
-  <div class="home-buttons">
-    <button onclick="openPage('igrice')">🎮 Igrice</button>
-    <button onclick="openPage('profili')">👤 Profili</button>
-    <button onclick="openPage('crediti')">⭐ Crediti</button>
+  <div class="home-container">
+    <div class="home-buttons">
+      <button onclick="openPage('igrice')">🎮 Igrice</button>
+      <button onclick="openPage('profili')">👤 Profili</button>
+      <button onclick="openPage('crediti')">⭐ Crediti</button>
+    </div>
+    <h1>Skibidi Stranica</h1>
   </div>
 </section>
 
 <!-- IGRICE -->
 <section id="igrice" class="page">
   <button class="back" onclick="goHome()">← Vrati se Nazad</button>
-
   <div class="igrice-layout">
     <div class="column">
       <h2>Vozačke Igrice</h2>
-
       <div class="game">
         <img src="https://tr.rbxcdn.com/3950890867d1f9b5e5a1c6a5c8d8f7f6/150/150/Avatar/Png" alt="A Dusty Trip">
         <div>
@@ -38,7 +36,6 @@
           <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
-
       <div class="game">
         <img src="https://tr.rbxcdn.com/189707d1f8b6f7e6b3a1c2e5d8f7f9d/150/150/Avatar/Png" alt="A Long Road">
         <div>
@@ -46,7 +43,6 @@
           <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
-
       <div class="game">
         <img src="https://tr.rbxcdn.com/15623447f7d8f9e5c6a2b3d4a1e8f7b/150/150/Avatar/Png" alt="A Desert">
         <div>
@@ -55,10 +51,8 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <h2>Horror Igrice</h2>
-
       <div class="game">
         <img src="https://tr.rbxcdn.com/4893679160f7d8f6e5c1b2a3d4e8f7a/150/150/Avatar/Png" alt="Scary Shawarma Kiosk">
         <div>
@@ -66,7 +60,6 @@
           <a href="#">Klikni Me Da Uđeš u Igricu!</a>
         </div>
       </div>
-
       <div class="game">
         <img src="https://tr.rbxcdn.com/6516141723f7d8e5c6b2a1d3f4e8f7c/150/150/Avatar/Png" alt="Doors">
         <div>
@@ -81,45 +74,31 @@
 <!-- PROFILI -->
 <section id="profili" class="page">
   <button class="back" onclick="goHome()">← Vrati se Nazad</button>
-
   <div class="profiles">
     <div class="profile">
       <span class="name">Toni Filipović</span>
       <input type="text" readonly value="5Cooke_God5" class="username-box">
       <button onclick="copyUser('5Cooke_God5')">Kopiraj Username</button>
     </div>
-
     <div class="profile">
       <span class="name">Ivan Brstilo</span>
       <input type="text" readonly value="Ivanrobolo" class="username-box">
       <button onclick="copyUser('Ivanrobolo')">Kopiraj Username</button>
     </div>
-
     <div class="profile">
       <span class="name">Ivan Barać</span>
       <input type="text" readonly value="Iko_pro47" class="username-box">
       <button onclick="copyUser('Iko_pro47')">Kopiraj Username</button>
     </div>
-
-    <div class="profile disabled">
-      Fran Jović – Još se nije pridružio 😔
-    </div>
-
-    <div class="profile disabled">
-      Marija Čorluka – Još se nije pridružila 😔
-    </div>
+    <div class="profile disabled">Fran Jović – Još se nije pridružio 😔</div>
+    <div class="profile disabled">Marija Čorluka – Još se nije pridružila 😔</div>
   </div>
 </section>
 
 <!-- CREDITI -->
 <section id="crediti" class="page center">
   <button class="back" onclick="goHome()">← Vrati se Nazad</button>
-
-  <p>
-    Programirano i Codirano sve od Toni-a (Sp1der)<br>
-    i malo pomoći od ChatGPT-a
-  </p>
-
+  <p>Programirano i Codirano sve od Toni-a (Sp1der)<br>i malo pomoći od ChatGPT-a</p>
   <div class="socials">
     <a href="https://www.youtube.com/@YepImSpider" target="_blank">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" class="icon">
