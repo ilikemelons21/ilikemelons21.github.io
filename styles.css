@@ -1,52 +1,44 @@
-* { box-sizing: border-box; }
+/* GLOBAL */
+* { box-sizing: border-box; margin:0; padding:0; font-family: "Fredoka", system-ui, sans-serif; }
+body { background: linear-gradient(180deg, #e6f4ff, #f3faff); color:#1e3a5f; }
 
-body {
-  margin: 0;
-  font-family: "Fredoka", system-ui, sans-serif;
-  background: linear-gradient(180deg, #e6f4ff, #f3faff);
-  color: #1e3a5f;
-}
-
-/* PAGES */
-.page { display: none; min-height: 100vh; padding: 30px; animation: slideDown 0.45s ease; }
+/* PAGE */
+.page { display: none; min-height: 100vh; padding: 20px; animation: slideDown 0.45s ease; }
 .page.active { display: block; }
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* HOME */
-#home { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-h1 { font-size: 3rem; margin-bottom: 40px; }
-.home-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
-button { padding: 14px 22px; font-size: 1.1rem; border-radius: 16px; border: none; cursor: pointer; background: linear-gradient(135deg, #5bbcff, #2f9bff); color: white; }
+@keyframes slideDown { from { opacity:0; transform: translateY(-25px); } to { opacity:1; transform: translateY(0); } }
 
 /* BACK BUTTON */
-.back { position: fixed; top: 20px; right: 20px; }
+.back { position: fixed; top:20px; right:20px; padding:10px 14px; border:none; border-radius:10px; background:#5bbcff; color:white; cursor:pointer; }
+
+/* HOME */
+#home { display:flex; justify-content:flex-start; align-items:flex-start; padding:40px 30px; min-height:100vh; }
+.home-container { display:flex; flex-direction:column; align-items:center; width:100%; }
+.home-buttons { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:20px; }
+.home-buttons button { padding:14px 22px; font-size:1.1rem; border-radius:16px; border:none; cursor:pointer; background:linear-gradient(135deg,#5bbcff,#2f9bff); color:white; }
+#home h1 { font-size:3rem; text-align:center; margin-top:0; }
 
 /* IGRICE */
-.igrice-layout { display: flex; gap: 30px; flex-wrap: wrap; }
-.column { flex: 1; min-width: 280px; }
-.game { display: flex; gap: 12px; background: white; padding: 14px; border-radius: 16px; margin-bottom: 16px; }
-.game img { width: 56px; height: 56px; border-radius: 12px; }
-.game a { display: inline-block; margin-top: 4px; color: #2f9bff; text-decoration: none; }
+.igrice-layout { display:flex; gap:30px; flex-wrap:wrap; margin-top:30px; }
+.column { flex:1; min-width:280px; }
+.game { display:flex; gap:12px; background:white; padding:14px; border-radius:16px; margin-bottom:16px; align-items:center; }
+.game img { width:56px; height:56px; border-radius:12px; }
+.game a { display:inline-block; margin-top:4px; color:#2f9bff; text-decoration:none; font-weight:600; }
 
-/* PROFILI */
-.profiles { max-width: 480px; margin: auto; display: grid; gap: 14px; }
-.profile { display: flex; align-items: center; gap: 10px; background: white; padding: 12px; border-radius: 12px; }
-.profile.disabled { opacity: 0.5; }
-.username-box { padding: 6px 10px; border: 1px solid #ccc; border-radius: 8px; background: #f3faff; width: 140px; }
-.name { font-weight: 600; flex: 1; }
+/* PROFILES */
+.profiles { max-width:480px; margin:auto; display:grid; gap:14px; margin-top:40px; }
+.profile { display:flex; align-items:center; gap:10px; background:white; padding:12px; border-radius:12px; }
+.profile.disabled { opacity:0.5; }
+.username-box { padding:6px 10px; border:1px solid #ccc; border-radius:8px; background:#f3faff; width:140px; }
+.name { font-weight:600; flex:1; }
 
 /* CREDITI */
-.center { text-align: center; }
-.socials a { margin: 12px; }
-.icon { width: 32px; height: 32px; }
+.center { text-align:center; margin-top:60px; }
+.socials a { margin:12px; display:inline-block; }
+.icon { width:32px; height:32px; }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .igrice-layout { flex-direction: column; }
-  .column { width: 100%; }
-  .profiles { max-width: 100%; }
+@media (max-width:768px){
+  .igrice-layout{flex-direction:column;}
+  .column{width:100%;}
+  .profiles{max-width:100%;}
 }
