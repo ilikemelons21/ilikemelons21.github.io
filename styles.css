@@ -15,21 +15,15 @@ body {
 .page {
   display: none;
   min-height: 100vh;
-  padding: 20px 30px 40px 30px; /* top, right, bottom, left */
+  padding: 0 30px 40px 30px; /* remove top padding */
   animation: slideDown 0.45s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* aligns content to top */
 }
 .page.active {
-  display: block;
-}
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  display: flex;
 }
 
 /* BACK BUTTON */
@@ -46,24 +40,17 @@ body {
 }
 
 /* HOME */
-#home {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 40px 30px 20px 30px;
-  min-height: 100vh;
-}
-.home-container {
+#home .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  margin-top: 40px; /* small top margin */
 }
 .home-buttons {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px; /* space between buttons and title */
+  margin-bottom: 10px;
 }
 .home-buttons button {
   padding: 14px 22px;
@@ -82,13 +69,13 @@ body {
 
 /* IGRICE */
 #igrice {
-  padding-top: 400px; /* move content up */
+  margin-top: 20px; /* small margin from top/back button */
 }
 .igrice-layout {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .column {
   flex: 1;
@@ -118,13 +105,13 @@ body {
 
 /* PROFILES */
 #profili {
-  padding-top: 20px; /* move content up */
+  margin-top: 20px; /* move up */
 }
 .profiles {
   max-width: 480px;
-  margin: 20px auto 0 auto; /* move content up */
   display: grid;
   gap: 14px;
+  margin-top: 10px;
 }
 .profile {
   display: flex;
@@ -151,11 +138,11 @@ body {
 
 /* CREDITI */
 #crediti {
-  padding-top: 20px; /* move content up */
+  margin-top: 20px;
 }
 .center {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .socials a {
   margin: 12px;
