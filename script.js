@@ -3,9 +3,7 @@ function openPage(id) {
   document.getElementById(id).classList.add("active");
 }
 
-function goHome() {
-  openPage("home");
-}
+function goHome() { openPage("home"); }
 
 function copyUser(username) {
   navigator.clipboard.writeText(username);
